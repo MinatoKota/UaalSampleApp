@@ -186,7 +186,6 @@ public class FaceTracking : MonoBehaviour
         mouthForm = model.Parameters[17];
         mouthOpen = model.Parameters[18];
         
-        
     }
 
     //顔の向きを更新する
@@ -196,7 +195,7 @@ public class FaceTracking : MonoBehaviour
         Quaternion faceRotation = arFace.transform.rotation;
         
         float x = NormalizeAngle(faceRotation.eulerAngles.x)* 2f;
-        float y = NormalizeAngle(faceRotation.eulerAngles.y);
+        float y = NormalizeAngle(faceRotation.eulerAngles.y)* 2f;
         float z = NormalizeAngle(faceRotation.eulerAngles.z)* 2f;
         
     
